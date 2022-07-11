@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./semantic.min.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <title>Todo-list</title>
+</head>
+<body>
+  <div class="container">
+    <h1>TODO LIST</h1>
+    <div class="ui divider"></div>
+    <div>
+      <div class="ui action input">
+        <input type="text" class="add-todo-input"placeholder="Введите название задача...">
+        <button class="ui button add-todo-button">Добавить</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Реализовать переключение вкладок -->
+    <!-- Массив данных у нас 1 на все todo-элементы. Необходимо фильтровать из по полю done. -->
+    <!-- Если done === true, то эти задачи считаются завершенными, в противном случае они активные -->
+    <div class="ui buttons tabs">
+      <!-- Активной вкладке задаем класс blue -->
+      <button class="ui button blue all-task">Все</button>
+      <button class="ui button false-task">Активные</button>
+      <button class="ui button true-task">Завершенные</button>
+    </div>
+    <div class="ui divider"></div>
+    <!-- ДОПОЛНИТЕЛЬНОЕ ЗАДАНИЕ: Реализовать поиск "на лету" -->
+    <!-- При измененнии значения в input'е сразу фильтровать список TODO элементов. -->
+    <!-- P.S. событие называется 'input' -->
+    <div class="ui icon input search-input">
+      <input type="text" placeholder="Поиск">
+      <i class="inverted circular search icon"></i>
+    </div>
+    <div class="list">
+      
+    </div>
+  </div>
+  <script src="./index.js"></script>
+  <!-- <script src="./ins.js"></script> -->
+</body>
+</html>

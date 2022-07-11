@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <h1 class="title">
+    Weather App
+  </h1>
+  <h1 class="date">
+    Today: <span class="today-value"></span>
+  </h1>
+
+  <div class="container" data-component>
+    <div class="input-container">
+      <input class="input" placeholder="Enter city or country name" type="text" />
+      <button class="button button-search">Search</button>
+      <button class="button button-geolocation">
+        <img src="./images/map.svg" alt="Geolocation">
+      </button>
+    </div>
+    <div class="error hidden">Oops, Something Went Wrong.</div>
+  </div>
+
+  <div class="container container-main hidden" data-component>
+  </div>
+
+
+  <div class="container container-forecast hidden" data-component="">
+  </div>
+
+  <script src="./js/index.js" type="module"></script>
+  <script src="./js/api-service.js" type="module"></script>
+</body>
+</html>

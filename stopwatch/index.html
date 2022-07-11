@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css" />
+  <title>Stopwatch</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <!-- Формат: Минуты:Секунды:Миллисекунды -->
+      <div class="value">00:00:00</div>
+    </div>
+    <div class="controls">
+      <!-- Изначальное состояние панели управления -->
+      <div class="controls-initial">
+        <!-- При нажатии на кнопку должен запускаться секундомер -->
+        <button class="button button--green button--start">Старт</button>
+      </div>
+      <!-- Если секундомер запущен, то отображаем эту панель управления -->
+      <!-- Для скрытия определенно панели управления надо для нее добавить класс hidden -->
+      <div class="controls-active hidden">
+        <!-- ДОПОЛНИТЕЛЬНОЕ ЗАДАНИЕ: При нажатии на "Круг" мы должны записывать текущее время в таблицу и выводить ее на экран. Данные хранить в объекте/массиве. -->
+        <button class="button button--blue button--lap">Круг</button>
+        <!-- При нажатии на "Стоп" надо останавливать секундомер и показывать следующую панель управления -->
+        <button class="button button--red button--pause">Стоп</button>
+      </div>
+      <!-- Если секундомер стоит на паузе, то отображаем следующую панель -->
+      <div class="controls-paused hidden">
+        <!-- При нажатии сбрасываем таймер, скрываем таблицу, очищаем данные этой таблицы. -->
+        <button class="button button--red button--reset">Сброс</button>
+        <!-- При нажатии запускаем таймер и продолжаем вести отсчет с того времени, на котором остановились. -->
+        <button class="button button--green button--start">Старт</button>
+      </div>
+    </div>
+    <!-- ДОПОЛНИТЕЛЬНОЕ ЗАДАНИЕ: Таблица должна отображаться если мы хотя бы 1 раз нажали на кнопку "Круг". Таблица должна скрываться и отчищаться при нажатии на кнопку "Сброс" -->
+    <div class="table">
+      <div class="table-row">
+        <div class="table-cell">Круг</div>
+        <div class="table-cell">Время</div>
+      </div>
+      <!-- Формат оформления таблицы -->
+      <!-- <div class="table-row">
+        <div class="table-cell">Круг 2</div>
+        <div class="table-cell">00:14:32</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Круг 1</div>
+        <div class="table-cell">00:10:03</div>
+      </div> -->
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

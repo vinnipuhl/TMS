@@ -1,0 +1,37 @@
+<!-- data-id - это уникальный id элемента, который генерируется при добавлении -->
+<div class="todo" data-id="123asltpe3">
+    <label class="checkbox">
+      <input type="checkbox" />
+      <div class="checkbox-icon"></div>
+    </label>
+    <span class="text">Learn JS</span>
+    <!-- При нажатии на кнопку "Удалить" необходимо отобразить confirm с текстом "Вы действительно хотите удалить эту задачу?" -->
+    <!-- При подтверждении элемент удаляется из local storage, а так же с UI -->
+    <button class="negative ui button">Удалить</button>
+    <!-- ДОПОЛНИТЕЛЬНОЕ ЗАДАНИЕ: Реализовать возможность редактирования задачи -->
+    <button class="circular ui icon button button-edit">
+      <i class="icon cog"></i>
+    </button>
+  </div>
+
+
+<!-- Этот элемент относится к дополнительному задание по редактированию элемента -->
+      <div class="todo edit-name" data-id="00921adppe3">
+        <div class="ui small input input-edit">
+          <!-- Сюда по умолчанию подставляет название редактируемого элемента -->
+          <input type="text"  placeholder="Введите новое название...">
+        </div>
+        <!-- При нажатии на "Сохранить" изменяем имя TODO-элемента и выходим из режима редактирования -->
+        <button class="ui positive button small">Сохранить</button>
+        <!-- При нажатии на "Отмена" выходим из режима редактирования, название остается прежним -->
+        <button class="ui button small">Отмена</button>
+      </div>
+      <!-- Выполненному элементу добавляем класс todo--active, он добавляет тексту "перечеркнутый" стиль. Элемент считается выполненным при активации чекбокса -->
+      <div class="todo todo--active" data-id="16fftU82">
+        <label class="checkbox">
+          <input checked type="checkbox" />
+          <div class="checkbox-icon"></div>
+        </label>
+        <span class="text">Learn JS</span>
+        <button class="negative ui button">Удалить</button>
+      </div>
